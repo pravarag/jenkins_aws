@@ -1,0 +1,27 @@
+
+## The moves are stored in a dictionary which prompts users to enter the next move
+
+import pprint
+
+
+
+def tic_tac_toe(dict_tic):
+	turn ='X'
+	#print dict_tic
+	for i in range(9):
+		print turn
+		print("Tic Tac Toe board:")
+		print("Enter turn "+turn+" for which space:")
+		_space=str(raw_input())
+		#print _space
+		dict_tic[_space]=turn
+		if turn=='X':
+			turn='O'
+		else:turn='X'
+	return dict_tic
+
+
+
+if __name__=="__main__":
+	dict_tic={'UL':'','UM':'','UR':'','ML':'','MM':'','MM':'','MR':'','LR':'','LM':'','LR':''}
+	print(tic_tac_toe(dict_tic))
